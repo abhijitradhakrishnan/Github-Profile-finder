@@ -1,0 +1,275 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    transition: all .2s;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #045de9;
+    flex-direction: column;
+    background-image: linear-gradient(135deg, #045de9 0%, #09c6f9 74%);
+}
+
+.container .box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .6rem;
+    flex-direction: column;
+}
+
+                                        /* Github Profile search box */
+.container .box .input-search {
+    width: 300px;
+    height: 40px;
+    background: #09c6f9;
+    position: relative;
+    border-radius: 5px;
+    margin: 2rem 0;
+    overflow: hidden;
+}                   
+
+.container .box .input-search #search-term {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 1.2rem;
+    outline: none;
+    border-radius: 5px;
+    border: 1.2px solid #437bd4;
+    background: #eee;
+    color: #616161;
+    padding: 0 1rem;
+    padding-right: 3rem;
+}
+
+.container .box .input-search ion-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    padding: 10px;
+    background: #045de9;
+    z-index: 10;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.container .box .searching {
+    text-align: center;
+    font-size: 1.3rem;
+    color: #616161;
+    margin-top: -15px;
+    margin-bottom: 10px;
+}
+
+                                        /* Github Profile search details card */
+.container .profile-box {
+    width: 750px;
+    padding: 2rem;
+    border-radius: 10px;
+    background-color: #fff;
+    overflow: hidden;
+    box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.2);
+    /* display: none; */
+}
+
+.profile-box .row {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.profile-box .row .image {
+    min-width: 110px;
+    width: 110px;
+    height: 110px;
+    position: relative;
+    border-radius: 50%;
+    margin-left: 1rem;
+    border: 5px solid #045de9;
+}
+
+.profile-box .row .image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-box .row .about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-left: 12px;
+}
+
+.profile-box .row .about .details .name {
+    font-size: 1.8rem;
+    color: #616161;
+    line-height: 2rem;
+}
+
+.profile-box .row .about .details .username {
+    font-size: 1rem;
+    color: #616161;
+    margin: 3px 0;
+}
+
+.profile-box .row .about .details .country {
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    color: #616161;
+}
+
+.profile-box .row .about .details .country span {
+    margin-top: 3px;
+    margin-right: 10px;
+}
+
+.profile-box .btn-profile a {
+    text-decoration: none;
+    color: #fff;
+    background: #045de9;
+    padding: .8rem 1.5rem;
+    border-radius: 8px;
+    flex: 1;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+}
+
+                                /* Bio section  */
+.profile-box .bio {
+    width: 100%;
+    margin-top: 1rem;
+    position: relative;
+    padding: 0 1rem;
+}
+
+.profile-box .bio h3 {
+    font-size: 1.4rem;
+    color: #045de9;
+    margin: 5px 0;
+    margin-top: 0 !important;
+}
+
+.profile-box .bio p {
+    font-size: 1rem;
+    color: #757575;
+    margin: 5px 0;
+    margin-top: 0 !important;
+}
+
+.profile-box .row-followers {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+    padding-top: .5rem;
+    padding-bottom: 0;
+}
+
+.profile-box .row-followers .col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.profile-box .row-followers .col .heading {
+    font-size: 1.4rem;
+    color: #045de9;
+    margin: 5px 0;
+    margin-top: 0 !important;
+}
+
+.profile-box .row-followers .col p {
+    font-size: 1.8rem;
+    color: #9e9e9e;
+    margin: 5px 0;
+    margin-top: 0 !important;
+}
+
+                                /* Styling Repository */
+.profile-box .repo-heading {
+    font-size: 1.4rem;
+    color: #045de9;
+    margin: 5px 0;
+    margin-top: 0;
+    padding-left: 1rem;
+}
+
+.profile-box .repos-row {
+    position: relative;
+    margin-top: .5rem;
+    padding: 0 1rem;
+    background: #f5f5f5;
+    margin: .5rem 1rem;
+    margin-top: 1rem;
+    border-radius: 10px;
+    height: 170px;
+    padding: 1rem;
+    overflow: auto;
+}
+
+.profile-box .repos-row::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 20px;
+}
+.profile-box .repos-row::-webkit-scrollbar-thumb {
+    background: #052250;
+    border-radius: 20px;
+}
+.profile-box .repos-row::-webkit-scrollbar-track {
+    background: #4584e9;
+    border-radius: 20px;
+}
+
+                                    /* Change for making it display girid */
+.profile-box .repos-row ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.profile-box .repos-row ul a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #444343;
+}
+
+.profile-box .repos-row ul li {
+    width: 100%;
+    padding: .5rem;
+    margin: 3px 0;
+    list-style: none;
+    display: block;
+    border-radius: 5px;
+}
+
+.profile-box .repos-row ul li:hover {
+    background: #052250;
+    color: #fff;
+
+}
